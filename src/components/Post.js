@@ -1,4 +1,5 @@
 import { useEffect } from "react"
+import Like from "../hooks/Like"
 
 
 export default function Post() {
@@ -47,6 +48,9 @@ export default function Post() {
                             <h4>{rawPostList[i].post_time}</h4>
                         </div>
                         <p>{rawPostList[i].content}</p>
+                        <div>
+                            <Like />
+                        </div>
                     </article>
                 )
             } catch (e) {

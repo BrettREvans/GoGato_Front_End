@@ -1,5 +1,6 @@
 import Post from './components/Post';
 import './css/App.css';
+import './css/like.css'
 
 function App() {
   return (
