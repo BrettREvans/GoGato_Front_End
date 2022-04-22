@@ -30,38 +30,3 @@ html, body, #root, .App {
 
 
 
-/* post css rules */
-
-#post-container{
-  margin: auto;
-  width: 60%;
-
-  flex-direction: column;
-  align-items: center;
-  align-self: center;  
-}
-
-.post{
-  margin-top: 25px;
-  padding: 25px;
-
-  width: 80%;
-  height: auto;
-  max-height: 200px ;
-
-  background-color: gray;
-  box-shadow: 0 0 0 3px  black;
-  border-radius: 15px;
-
-  overflow:auto;
-  scrollbar-width: none;
-  size: 16px;
-
-}
-.post::-webkit-scrollbar{
-  display: none;
-}
-
-.post-header {
-  justify-content: space-around;
-}
