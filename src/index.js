@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './css/index.css';
+import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import PostDisplayTest from './components/PostDisplayTest';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <PostDisplayTest />
+    <App />
   </React.StrictMode>
 );
 
