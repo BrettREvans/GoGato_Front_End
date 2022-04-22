@@ -1,0 +1,38 @@
+.blur{
+    z-index: 50;
+    opacity: 60%;
+    filter: blur(1.5rem);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    cursor: grab;
+}
+
+
+.closeButton{
+    z-index: 100;
+    float: right;
+
+    padding: 0.5em;
+
+    font-size: 5em;
+    z-index: 100;
+
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+
+.changeScreen{
+    margin-top: 15vh;
+
+    z-index: 75;
+    position: absolute;
+
+    width: 100vw;
+    height: 50vh;
+
+    text-align: center;
+    background-color: white;
+}
