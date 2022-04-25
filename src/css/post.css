@@ -1,4 +1,7 @@
 /* post css rules */
+.flex-container {
+    display: flex;
+}
 
 #post-container{
     margin: auto;
@@ -11,28 +14,28 @@
   
 .post, .comment{
     margin-top: 25px;
-    padding: 25px;
+    padding: 10px;
   
-    width: 80%;
+    width: 100%;
     height: auto;
-    max-height: 200px ;
   
     background-color: gray;
+    border: 3px solid darkgray;
     box-shadow: 0 0 0 3px  black;
     border-radius: 15px;
   
     overflow:auto;
     scrollbar-width: none;
     size: 16px;
-  
+}
+
+li {
+    list-style: none;
 }
 
 .comment {
-    padding: 15px;
-    width: 67%;
-    max-height: 250px;
-    position: relative;
-    left: 200px;
+    padding: 5px;
+    margin-left: 25px;
 }
 
 

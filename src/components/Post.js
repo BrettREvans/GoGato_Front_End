@@ -93,16 +93,18 @@ export default function Post() {
             if (element.parent_post_id == id) {
                 
                 commentList.push(
-                    <article className="comment" key={element.post_id}>
-                        <div id={"comment" + element.post_id} >
-                            <div>
-                                <h5>{element.author_username}</h5>
-                                <h5>{element.post_time}</h5>
+                    <li key={element.post_id}>
+                        <article  className="comment" >
+                            <div id={"comment" + element.post_id} >
+                                <div className="flex-container post-header">
+                                    <h5>{element.author_username}</h5>
+                                    <h5>{element.post_time}</h5>
+                                </div>
+                                <p>{element.content}</p>
                             </div>
-                            <p>{element.content}</p>
-                        </div>
-                        {getCommentsByParentId(element.post_id)}
-                    </article>
+                        </article>    
+                        <ul>{getCommentsByParentId(element.post_id)}</ul>
+                    </li>
                 )
             }
         });

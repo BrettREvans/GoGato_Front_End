@@ -6,13 +6,10 @@ html, body, #root, .App {
   height: 100%;
 }
 
-.flex-container {
-  display: flex;
-}
+
 
 .App {
   text-align: center;
-  height: 100%;
 }
 
 .App-header {
