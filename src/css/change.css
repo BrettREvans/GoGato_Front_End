@@ -1,26 +1,32 @@
 .blur{
-    z-index: 50;
-    opacity: 60%;
-    filter: blur(1.5rem);
-    position: absolute;
+
     width: 100vw;
     height: 100vh;
+
+    z-index: 50;
+    opacity: 60%;
+    
+    position: absolute;
     cursor: grab;
+    
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 
 .closeButton{
-    z-index: 100;
-    float: right;
+    position: fixed;
 
+    z-index: 100;
     padding: 0.5em;
-
     font-size: 5em;
-    z-index: 100;
 
     background-color: transparent;
     border: none;
     outline: none;
+    cursor: grabbing;
 }
 
 
@@ -34,5 +40,9 @@
     height: 50vh;
 
     text-align: center;
-    background-color: white;
+
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+
+    background-color: rgba(255, 255, 255, 0.3);
 }
