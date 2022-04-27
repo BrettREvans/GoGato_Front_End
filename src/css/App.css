@@ -4,6 +4,7 @@
 /* global css rules */
 html, body, #root, .App {
   height: 100%;
+  background-color: aliceblue;
 }
 
 
@@ -14,7 +15,7 @@ html, body, #root, .App {
 
 .App-header {
   height: 100px;
-  background-color: rgb(172, 169, 14);
+  background-color: rgb(226, 95, 43);
 }
 
 .App-footer {
@@ -22,7 +23,7 @@ html, body, #root, .App {
   bottom: 0;
 
   height: 50px;
-  background-color: rgb(172, 169, 14);
+  background-color: rgb(226, 95, 43);
 }
 
 
@@ -40,9 +41,9 @@ button{
   /* display: flex; */
   /* margin: 100px auto; */
   background-color: rgb(226, 95, 43);
-  font-size: 24px;
-  font-family: Futura-Std-Bold;
-  padding: 15px 20px;
+  font-size: 15px;
+  font-family: Futura-Std-Medium;
+  padding: 5px 15px;
   border: color black;
   border-radius: 6px;
   box-shadow: 5px 5px 5px 5px rgba(0.1);
