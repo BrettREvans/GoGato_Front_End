@@ -1,11 +1,14 @@
 
 // @Author: Brett Evans
 
-import { useEffect } from "react"
+import { render } from "@testing-library/react"
+import { useEffect, useState } from "react"
+import Popup from 'reactjs-popup'
 import Like from "../hooks/Like"
-
+import Change from "./Change"
 
 export default function Post() {
+
 
     const readyPostList = []
     const rawPostList = [
@@ -84,8 +87,11 @@ export default function Post() {
             "post_time":'2022-03-03 20:44:20'
         }
     ]
+    const [editing,setEditState] = useState(false)
     
-    
+    const editContent = () => {
+        (<Change/>)
+    }
 
     const getCommentsByParentId = (id) => {
         const commentList = []
@@ -123,11 +129,16 @@ export default function Post() {
                                     <h4>{rawPostList[i].author_username}</h4>
                                     <h4>{rawPostList[i].post_time}</h4>
                                 </div>
-                                <p>{rawPostList[i].content}</p>
+                                    <p>{rawPostList[i].content}</p>
                                 <div>
                                     <Like />
-                                </div>
+                                    <Popup trigger={<button>Edit</button>} modal nested>
+                                        <Change/>
+                                    </Popup>
+                                    
+                                </div>    
                             </div>
+                            
                             <ul>{getCommentsByParentId(rawPostList[i].post_id, rawPostList)}</ul>
                         </article>
                         
@@ -155,3 +166,12 @@ export default function Post() {
         </section>
     ) 
 }
+
+
+
+
+
+// ( <Popup trigger={<button className="button"> Open Modal </button>} modal nested >
+//  {close => ( 
+//     <div className="modal">
+//     </div>)} </Popup>);
