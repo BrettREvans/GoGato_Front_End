@@ -7,57 +7,78 @@ import filledLike from './../images/FilledLikeGGs.png'
 
 
 
-export default function Like(){
-    const currentUser = "Justin!";
+export default function Like(likeToChild){
     const [on, setOn] = useState('');
     const [off, setOff] = useState('');
-    const[like, setLike] = useState('');
+    const[like, setLike] = useState(likeToChild.likeToChild);
     const[dImage, setDImage] = useState(blankDislike)
     const[lImage, setLImage] = useState(blankLike)
+    // const[postId, setPostId] = useState(likeToChild.postIdToChild);
     
-   
+        function submitLike(likes){
+            const post ={
+                likeCount : likes,
+            };
+            const postJSON =JSON.stringify(post);
+        
+
+            const response= fetch(`http://192.168.1.126:8080/post/${likeToChild.postIdToChild}`,{
+                method:"PUT",
+                headers:{
+                    "Content-Type":"application/json",
+                },
+                body:postJSON,
+            });
+            if(response.status == 200){
+                alert("submitted")
+            }
+        }
+
     
     
-    const parentToChild = (like) =>{
+    const parentToChild = (likes) =>{
             if(on){
-            like--;
-            setOn(false)
+            likes--;
+            setLike(likes);
+            setOn(false);
             setLImage(blankLike);
-            setLike(like);
-            
+            submitLike(likes)
             }else{
-                like++;
-                setOn(true);
-                setLike(like); 
+                likes++;
+                setLike(likes);
+                setOn(true); 
                 setLImage(filledLike);
+                submitLike(likes);
                 if(off){
-                    parentToMinusChild(like);
+                    parentToMinusChild(likes);
                 }      
             }    
         }
-    const parentToMinusChild = (like) =>{
+    const parentToMinusChild = (likes) =>{
         if(off){
-            like++;
-            setOff(false)
-            setLike(like);
-            setDImage(blankDislike)
+            likes++;
+            setLike(likes);
+            setOff(false);
+            setDImage(blankDislike);
+            submitLike(likes);
             
             }else{
-                like--;
-                setDImage(filledDislike)
-                setOff(true)
-                setLike(like);      
+                likes--;
+                setDImage(filledDislike);
+                setOff(true);
+                setLike(likes);    
+                submitLike(likes);  
                 if(on){
-                    parentToChild(like);
+                    parentToChild(likes);
                 }
             }   
     }
     return(
         <>
-            
             <span >
                 <img src = {dImage} id = "images" onClick = {() => parentToMinusChild(like)}></img>
-                <img src ={lImage} id = "images" onClick = {() => parentToChild(like)}></img>    
+                <img src ={lImage} id = "images" onClick = {() => parentToChild(like)}></img> 
+                {like}  
             </span>
         </>
     );

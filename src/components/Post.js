@@ -107,6 +107,12 @@ export default function Post() {
                                     <h5>{element.post_time}</h5>
                                 </div>
                                 <p>{element.content}</p>
+                                <div className="flex-container">
+                                    <Like />
+                                    <Popup trigger={<button>Edit</button>} modal nested>
+                                        <Change/>
+                                    </Popup>
+                                </div>
                             </div>
                         </article>    
                         <ul>{getCommentsByParentId(element.post_id)}</ul>
@@ -130,12 +136,11 @@ export default function Post() {
                                     <h4>{rawPostList[i].post_time}</h4>
                                 </div>
                                     <p>{rawPostList[i].content}</p>
-                                <div>
+                                <div className="flex-container">
                                     <Like />
                                     <Popup trigger={<button>Edit</button>} modal nested>
                                         <Change/>
                                     </Popup>
-                                    
                                 </div>    
                             </div>
                             

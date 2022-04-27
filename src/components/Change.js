@@ -6,7 +6,7 @@ function Change(){
 
     return (
         <>
-            <button className="closeButton">X</button>
+            <button type='submit' className="closeButton">X</button>
             <div className="blur"></div>
 
             <section className="changeScreen">
