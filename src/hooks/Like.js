@@ -104,16 +104,17 @@ export default function Like(likeToChild){
             fetch(`http://192.168.1.126:8080/likes/${currentuserid}`) // makes a fetch call to table posts where current user id is found and pulls out all posts user has a state with
             .then(response => response.json())
             .then(data => setHasState(data));
-            if(hasState(i).like_state = 0){//gets the current state of the post by user id if state is 0 then both are blank
+            //ToDo: change hasState()
+            if(hasState.like_state = 0){//gets the current state of the post by user id if state is 0 then both are blank 
                 setLImage(blankLike);
                 setDImage(blankDislike);
                 setLikesId((hasState).id);//gets the id from Likes table to make a put method based on the id from the likes table later
-            }else if(hasState(i).like_state = 1){ //if state is one then like is filled dislike is empty and state On is true
+            }else if(hasState.like_state = 1){ //if state is one then like is filled dislike is empty and state On is true
                 setLImage(filledLike);
                 setDImage(blankDislike);
                 setLikesId((hasState).id);//gets the id from Likes table to make a put method based on the id from the likes table later
                 setOn(true)
-            }else if(hasState(i).like_state = 2){ //if state 2 is on like is blank dislike is filled and state off is true
+            }else if(hasState.like_state = 2){ //if state 2 is on like is blank dislike is filled and state off is true
                 setLImage(blankLike);
                 setDImage(filledDislike);
                 setLikesId((hasState).id);//gets the id from Likes table to make a put method based on the id from the likes table later
