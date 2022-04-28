@@ -12,7 +12,7 @@ class PContainer extends Component{
 
     componentDidMount(){
 
-        fetch("http://localhost:8080/post",{
+        fetch("http://localhost:8761/posts",{
         method: "get",
         })
 
@@ -26,13 +26,12 @@ class PContainer extends Component{
             .catch(err => {throw Error(err.message)});
         });
 
-        console.log(this.state.post);
     }
 
     render() {
         return (
             <section>
-                <GGCreate post={this.state.post}/>
+                
                 <GGPosts post={this.state.post}/>
             </section>
         )

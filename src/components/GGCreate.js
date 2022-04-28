@@ -2,7 +2,7 @@ import '../css/fonts.css';
 import '../css/change.css';
 
 
-const GGCreate = (props) => {
+const GGCreate = () => {
 
     return (
         <>
