@@ -25,6 +25,8 @@ class PContainer extends Component{
 
             .catch(err => {throw Error(err.message)});
         });
+
+        console.log(this.state.post);
     }
 
     render() {

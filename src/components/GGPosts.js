@@ -4,10 +4,12 @@ import GGMessage from "./GGMessage";
 
 const GGPosts = props => {
 
+    console.log(props);
+
     const displayPosts = () => {
         return props.post.map(post => {
 
-            return (<GGMessage usr = {post.username} contents = {post.contents}/>);
+            return (<GGMessage usr = {post.userid} contents = {post.contents} time = {post.post_time}/>);
 
         });
     };
