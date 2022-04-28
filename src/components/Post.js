@@ -5,6 +5,7 @@ import { render } from "@testing-library/react"
 import { useEffect, useState } from "react"
 import Popup from 'reactjs-popup'
 import Like from "../hooks/Like"
+import GGCreate from "./GGCreate"
 import Change from "./Change"
 
 export default function Post() {
@@ -241,6 +242,7 @@ export default function Post() {
 
     return (
         <section id="post-container" className="flex-container">
+            <GGCreate/>
             {readyPostList}
         </section>
     ) 
