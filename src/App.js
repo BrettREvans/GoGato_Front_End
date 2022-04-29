@@ -5,6 +5,7 @@ import Login from "./components/Login";
 import Navbar from "./components/Navbar";
 import { useState } from "react";
 import Profile from './components/Profile';
+import CreatePost from "./components/CreatePost";
 
 function App() {
   const [currentUserId, setCurrentUserId] = useState(0); // Tracks current user Id, along with localstorage in login/registration components
@@ -30,7 +31,11 @@ function App() {
             />
           }
         />
-
+        <Route
+          path="/post/create"
+          element={<CreatePost />}
+        />
+        
         <Route exact path="/profile/:id" element={<Profile currentUser={currentUserId} />} />
       </Routes>
     </BrowserRouter>
