@@ -4,7 +4,7 @@
 /* global css rules */
 html, body, #root, .App {
   height: 100%;
-  background-color: aliceblue;
+  background: aliceblue;
 }
 
 
@@ -26,7 +26,6 @@ html, body, #root, .App {
   background-color: rgb(226, 95, 43);
 }
 
-
 /* Here's the standard font for P3*/
 /* @font-face {
   font-family: 'fonts';
@@ -40,13 +39,13 @@ but for the sake of org here's the main css for all buttons.
 button{  
   /* display: flex; */
   /* margin: 100px auto; */
-  background-color: rgb(226, 95, 43);
+  background-color: #2d09fa;
   font-size: 15px;
   font-family: Futura-Std-Medium;
   padding: 5px 15px;
   border: color black;
   border-radius: 6px;
-  box-shadow: 5px 5px 5px 5px rgba(0.1);
+  /* box-shadow: 5px 5px 5px 5px rgba(0.1); */
 }
 /*Button 1 background and play
 */
