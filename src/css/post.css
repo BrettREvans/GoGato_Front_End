@@ -150,7 +150,7 @@
     scrollbar-width: none;
     size: 16px;
 } */ 
-
+/*Current color scheme*/
 .post, .comment{
     margin-top: 33px;
     padding: 10px;
@@ -158,10 +158,11 @@
     width: 100%;
     height: auto;
   
-    color: rgb(223, 49, 10);
-    background-color: rgba(208, 128, 212, 0.4);
-    box-shadow: 20px 10px 20px 10px rgba(208, 128, 212, 0.4);
-    border: 3px solid darkgray;
+    color: rgb(94, 93, 93);
+    background-color: rgba(243, 150, 9, 0.4);
+    box-shadow: 20px 10px 20px 10px rgba(2, 5, 55, 0.4);
+    border: 3px solid darkblue;
+    
     /* box-shadow: 0 0 0 3px  black; */
     border-radius: 15px;
     overflow:auto;
